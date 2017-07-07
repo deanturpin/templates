@@ -11,6 +11,7 @@ onload = function() {
 
 		// Check response is a good one
 		if (this.readyState === 4 && this.status === 200) {
+			
 			const response = JSON.parse(client.responseText)
 
 			// Sort the response by date
