@@ -1,19 +1,19 @@
 <script>
 onload = function() {
 
-	// Create a new AJAX request
-	var client = new XMLHttpRequest()
+  // Create a new AJAX request
+  var client = new XMLHttpRequest();
 
-	// Set up handler for AJAX response
-	client.onreadystatechange = function() {
+  // Set up handler for AJAX response
+  client.onreadystatechange = function() {
 
-		// Check response is a good one
-		if (this.readyState === 4 && this.status === 200)
-			console.log(client.responseText)
-	}
+    // Check response is a good one
+    if (this.readyState === 4 && this.status === 200)
+      console.log(client.responseText);
+  }
 
-	// Request the file
-	client.open("GET", "ajax.html")
-	client.send()
+  // Request the file
+  client.open("GET", "ajax.html");
+  client.send();
 }
 </script>

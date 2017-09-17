@@ -13,8 +13,6 @@ onload = function() {
 	// Create a new AJAX request
 	var client = new XMLHttpRequest()
 
-	const body = document.getElementsByTagName("body")[0]
-
 	// Set up handler for AJAX response
 	client.onreadystatechange = function() {
 
@@ -29,7 +27,7 @@ onload = function() {
 			})
 
 			for (var i = 0; i < 5; ++i)
-				body.innerText += 
+				document.body.innerText += 
 					"<a href='" + response[i].html_url + "'>"
 						+ response[i].full_name.split("/").pop() + "</a><br>\n"
 		}
