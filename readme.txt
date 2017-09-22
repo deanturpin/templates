@@ -13,8 +13,11 @@ GM script with popup.
 Simple black on white.
 
 # Terminal control codes
+http://ascii-table.com/ansi-escape-sequences.php
+
 ```cpp
 const auto red = "\033[41m";
 const auto white = "\033[0m";
 const auto yellow = "\033[33m";
+const auto clear_and_move_to_top = "\033[2J";
 ```
