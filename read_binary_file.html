@@ -1,0 +1,19 @@
+<input type="file" id="pcm" accept="*.pcm" />
+
+<script>
+onload = function() {
+
+  document.getElementById("pcm").onchange = function(e) {
+
+    const reader = new FileReader(e.target.files[0]);
+    reader.readAsArrayBuffer(e.target.files[0]);
+
+    // Set up handler for pulse file read
+    reader.onload = function(e) {
+
+      const pcm = new Uint16Array(e.target.result);
+      console.log("size of file", pcm.length);
+    }
+  }
+}
+</script>
